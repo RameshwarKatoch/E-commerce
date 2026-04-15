@@ -1,0 +1,275 @@
+/* ============================================================
+   CAROUSEL — Swiper product carousel for Green Bloom
+   ============================================================ */
+
+.co-carousel-wrap {
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0 20px;
+}
+
+.co-carousel {
+  margin: 0 auto;
+  width: 55%;
+  height: 560px;
+  overflow: visible;
+}
+
+.co-carousel__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.co-carousel__nav-buttons {
+  margin-top: 40px;
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.co-carousel__nav-button {
+  padding: 10px 0;
+  width: 150px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.co-carousel__nav-button.prev { align-items: flex-end; }
+.co-carousel__nav-button.next { align-items: flex-start; }
+.co-carousel__nav-button.swiper-button-disabled { opacity: 0.3; }
+
+.co-carousel__nav-button:hover:not(.swiper-button-disabled).prev span {
+  transform: translate3d(-10px, 0, 0);
+}
+.co-carousel__nav-button:hover:not(.swiper-button-disabled).next span {
+  transform: translate3d(10px, 0, 0);
+}
+
+.co-carousel__nav-button::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-muted);
+}
+
+.co-carousel__nav-button span {
+  font-family: var(--font, 'Inter', sans-serif);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 0;
+  color: var(--text);
+  transition: cubic-bezier(0.22, 0.74, 0.46, 0.97) 0.3s;
+}
+
+/* ── Card ───────────────────────────────────────────────── */
+.co-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 540px;
+  width: 340px;
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  background: linear-gradient(163deg, #f0ebe4 0%, #e2d8cc 100%);
+}
+
+/* Plant-specific card color variants */
+.co-card--style-1 {
+  background: linear-gradient(163deg, #e8f0e4 0%, #c8dcc0 100%);
+}
+.co-card--style-2 {
+  background: linear-gradient(163deg, #f5ede2 0%, #e8d5be 100%);
+}
+.co-card--style-3 {
+  background: linear-gradient(163deg, #e4ece8 0%, #c0d8cc 100%);
+}
+.co-card--style-4 {
+  background: linear-gradient(163deg, #f2e8e0 0%, #dcc8b4 100%);
+}
+.co-card--style-5 {
+  background: linear-gradient(163deg, #e8e4f0 0%, #d0c8dc 100%);
+}
+
+/* ── Plant image ────────────────────────────────────────── */
+.co-card__shoe {
+  position: relative;
+  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  overflow: hidden;
+  padding: 30px 20px 10px;
+}
+
+.co-card__shoe-img {
+  user-select: none;
+  position: relative;
+  width: 85%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  z-index: 2;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.12));
+}
+
+.co-card__shoe-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 50%;
+  width: 20px;
+  height: 12px;
+  opacity: 0.15;
+  background-color: rgba(0, 0, 0, 1);
+  box-shadow: 0 0 25px 35px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Card info ──────────────────────────────────────────── */
+.co-card__info {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 18px 24px 24px;
+  background: linear-gradient(to top, rgba(255,255,255,0.6) 0%, transparent 100%);
+  position: relative;
+  z-index: 3;
+}
+
+.co-card__title {
+  font-family: var(--font-serif, 'Playfair Display', serif);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--text, #3B2C1F);
+  text-transform: none;
+  line-height: 1.2;
+}
+
+.co-card__collection {
+  font-family: var(--font, 'Inter', sans-serif);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  color: var(--text, #3B2C1F);
+  margin-bottom: 4px;
+}
+
+.co-card__price {
+  margin-top: 8px;
+  font-family: var(--font, 'Inter', sans-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--green-primary, #78593F);
+}
+
+.co-card__badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+  background: var(--green-primary, #78593F);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 100vw;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: var(--font, 'Inter', sans-serif);
+}
+
+.co-card__cart-btn {
+  position: absolute;
+  bottom: 22px;
+  right: 22px;
+  z-index: 10;
+  background: var(--green-dark, #4A3525);
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+.co-card__cart-btn:hover {
+  background: var(--accent, #CDA15C);
+  transform: scale(1.1);
+}
+
+/* ── Text mask animation ────────────────────────────────── */
+.text-mask {
+  overflow: hidden;
+}
+.text-mask span {
+  display: inline-flex;
+}
+
+/* ── Background panels (full-page tints) ────────────────── */
+.co-background {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 0.5s ease;
+}
+.co-background--style-0 {
+  background: linear-gradient(163deg, #f0ebe4 0%, #e2d8cc 100%);
+}
+.co-background--style-1 {
+  background: linear-gradient(163deg, #e8f0e4 0%, #c8dcc0 100%);
+}
+.co-background--style-2 {
+  background: linear-gradient(163deg, #f5ede2 0%, #e8d5be 100%);
+}
+.co-background--style-3 {
+  background: linear-gradient(163deg, #e4ece8 0%, #c0d8cc 100%);
+}
+.co-background--style-4 {
+  background: linear-gradient(163deg, #f2e8e0 0%, #dcc8b4 100%);
+}
+.co-background--style-5 {
+  background: linear-gradient(163deg, #e8e4f0 0%, #d0c8dc 100%);
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .co-carousel { width: 70%; }
+  .co-carousel__nav-buttons { width: 70%; }
+}
+@media (max-width: 768px) {
+  .co-carousel { width: 85%; height: 500px; }
+  .co-carousel__nav-buttons { width: 85%; }
+  .co-card { height: 490px; width: 300px; }
+}
+@media (max-width: 480px) {
+  .co-carousel { width: 92%; }
+  .co-carousel__nav-buttons { width: 92%; }
+  .co-card { width: 270px; height: 460px; }
+}

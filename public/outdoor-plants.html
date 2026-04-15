@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outdoor Plants - Green Bloom</title>
+  <meta name="description" content="Explore vibrant outdoor plants for your garden and balcony — Bougainvillea, Hibiscus, Marigold & more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="home.css?v=4" />
+  <link rel="stylesheet" href="gooey-nav.css?v=4" />
+  <link rel="stylesheet" href="plant-showcase.css?v=4" />
+</head>
+<body class="showcase-page">
+
+  <!-- ── Showcase slide data ── -->
+  <script id="showcase-data" type="application/json">
+  [
+    {
+      "name": "Bougainvillea",
+      "icon": "🌸",
+      "category": "Outdoor · Flowering",
+      "price": "₹499",
+      "badge": "MOST POPULAR · GREEN BLOOM · GARDEN ·  ",
+      "bg": "#f0b8b8",
+      "dark": "#8B1A1A"
+    },
+    {
+      "name": "Marigold",
+      "icon": "🌼",
+      "category": "Outdoor · Annual",
+      "price": "₹199",
+      "badge": "PEST REPELLENT · GREEN BLOOM · EASY GROW ·  ",
+      "bg": "#f0d890",
+      "dark": "#7A4C00"
+    },
+    {
+      "name": "Hibiscus",
+      "icon": "🌺",
+      "category": "Outdoor · Tropical",
+      "price": "₹399",
+      "badge": "SUN LOVER · GREEN BLOOM · FRAGRANT ·  ",
+      "bg": "#f0c0b0",
+      "dark": "#8B2500"
+    },
+    {
+      "name": "Hydrangea",
+      "icon": "💐",
+      "category": "Outdoor · Perennial",
+      "price": "₹649",
+      "badge": "ALL SEASON · GREEN BLOOM · PREMIUM ·  ",
+      "bg": "#b8c8e8",
+      "dark": "#1A2B6B"
+    },
+    {
+      "name": "Lily",
+      "icon": "🌷",
+      "category": "Outdoor · Bulb",
+      "price": "₹449",
+      "badge": "ELEGANT · GREEN BLOOM · GIFTING ·  ",
+      "bg": "#e8e0d0",
+      "dark": "#4A3525"
+    },
+    {
+      "name": "Japanese Maple",
+      "icon": "🍁",
+      "category": "Outdoor · Ornamental",
+      "price": "₹1,299",
+      "badge": "PREMIUM · GREEN BLOOM · RARE TREE ·  ",
+      "bg": "#e8c0a0",
+      "dark": "#6B2000"
+    }
+  ]
+  </script>
+
+  <nav class="navbar-v2" id="navbar">
+    <a href="index.html" class="nav-v2-logo">
+      <span class="logo-mark">🌿</span>
+      Green Bloom
+    </a>
+
+    <div class="nav-v2-right">
+      <div class="gooey-nav-container">
+        <nav>
+          <ul class="nav-v2-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="indoor-plants.html">Indoor</a></li>
+            <li class="active"><a href="outdoor-plants.html">Outdoor</a></li>
+          </ul>
+        </nav>
+        <span class="effect filter"></span>
+        <span class="effect text"></span>
+      </div>
+      <a href="auth.html" class="nav-v2-user" id="nav-user-btn" title="Account">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </a>
+      <a href="cart.html" class="nav-v2-shop" id="nav-shop-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+        </svg>
+        <span>Cart</span>
+        <span class="cart-badge">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Giant background name ── -->
+  <div class="showcase-bg-text" aria-hidden="true">Bougainvillea</div>
+
+  <!-- ── Rotating badge ── -->
+  <div class="showcase-badge" aria-hidden="true">
+    <svg class="badge-ring-svg" viewBox="0 0 120 120">
+      <defs>
+        <path id="outdoor-circle" d="M60,60 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1,-74,0"/>
+      </defs>
+      <text class="badge-ring-text">
+        <textPath href="#outdoor-circle">MOST POPULAR · GREEN BLOOM · GARDEN ·  </textPath>
+      </text>
+    </svg>
+    <span class="badge-icon">🌸</span>
+  </div>
+
+  <!-- ── Price tag ── -->
+  <div class="showcase-price-tag">
+    <span class="price-plant-tag">Outdoor · Flowering</span>
+    <div class="price-amount">₹499</div>
+    <button class="price-cta" id="showcase-cart-btn">Add to Cart — ₹499</button>
+  </div>
+
+  <!-- ── Counter ── -->
+  <div class="showcase-counter">01 / 06</div>
+
+  <!-- ── Nav buttons ── -->
+  <button class="showcase-prev hidden" id="showcase-prev" aria-label="Previous plant">&#8592;</button>
+  <button class="showcase-next" id="showcase-next" aria-label="Next plant">&#8594;</button>
+
+  <!-- ── Slide track ── -->
+  <main class="showcase-main">
+    <div class="showcase-track">
+
+      <!-- 1: Bougainvillea -->
+      <div class="showcase-slide" id="slide-1">
+        <div class="plant-image plant-pos-1">
+          <img src="images/bougainvillea.png?t=1" alt="Bougainvillea" />
+        </div>
+        <div class="plant-image plant-pos-2">
+          <img src="images/marigold.png?t=1" alt="Outdoor" style="transform: scaleX(-1);" />
+        </div>
+        <div class="plant-image plant-pos-3">
+          <img src="images/Yellow%20hibiscus.png" alt="Hibiscus" />
+        </div>
+        <div class="plant-image plant-pos-4">
+          <img src="images/bougainvillea.png?t=1" alt="Bougainvillea" style="transform: scaleX(-1);" />
+        </div>
+      </div>
+
+      <!-- 2: Marigold -->
+      <div class="showcase-slide" id="slide-2">
+        <div class="plant-image plant-pos-1">
+          <img src="images/marigold.png?t=1" alt="Marigold" />
+        </div>
+        <div class="plant-image plant-pos-2">
+          <img src="images/marigold.png?t=1" alt="Marigold" style="transform: scaleX(-1);" />
+        </div>
+        <div class="plant-image plant-pos-3">
+          <img src="images/Yellow%20hibiscus.png" alt="Outdoor plant" />
+        </div>
+        <div class="plant-image plant-pos-4">
+          <img src="images/marigold.png?t=1" alt="Marigold" />
+        </div>
+      </div>
+
+      <!-- 3: Hibiscus -->
+      <div class="showcase-slide" id="slide-3">
+        <div class="plant-image plant-pos-1">
+          <img src="images/Yellow%20hibiscus.png" alt="Hibiscus" />
+        </div>
+        <div class="plant-image plant-pos-2">
+          <img src="images/bougainvillea.png?t=1" alt="Bougainvillea" />
+        </div>
+        <div class="plant-image plant-pos-3">
+          <img src="images/Yellow%20hibiscus.png" alt="Hibiscus" style="transform: scaleX(-1);" />
+        </div>
+        <div class="plant-image plant-pos-4">
+          <img src="images/marigold.png?t=1" alt="Outdoor" style="transform: scaleX(-1);" />
+        </div>
+      </div>
+
+      <!-- 4: Hydrangea -->
+      <div class="showcase-slide" id="slide-4">
+        <div class="plant-image plant-pos-1">
+          <img src="images/bougainvillea.png?t=1" alt="Hydrangea" />
+        </div>
+        <div class="plant-image plant-pos-2">
+          <img src="images/marigold.png?t=1" alt="Plant" style="transform: scaleX(-1);" />
+        </div>
+        <div class="plant-image plant-pos-3">
+          <img src="images/Yellow%20hibiscus.png" alt="Plant" />
+        </div>
+        <div class="plant-image plant-pos-4">
+          <img src="images/Yellow%20hibiscus.png" alt="Hydrangea" style="transform: scaleX(-1);" />
+        </div>
+      </div>
+
+      <!-- 5: Lily -->
+      <div class="showcase-slide" id="slide-5">
+        <div class="plant-image plant-pos-1">
+          <img src="images/marigold.png?t=1" alt="Lily" />
+        </div>
+        <div class="plant-image plant-pos-2">
+          <img src="images/Yellow%20hibiscus.png" alt="Plant" style="transform: scaleX(-1);" />
+        </div>
+        <div class="plant-image plant-pos-3">
+          <img src="images/bougainvillea.png?t=1" alt="Plant" />
+        </div>
+        <div class="plant-image plant-pos-4">
+          <img src="images/marigold.png?t=1" alt="Plant" />
+        </div>
+      </div>
+
+      <!-- 6: Japanese Maple -->
+      <div class="showcase-slide" id="slide-6">
+        <div class="plant-image plant-pos-1">
+          <img src="images/bougainvillea.png?t=1" alt="Japanese Maple" />
+        </div>
+        <div class="plant-image plant-pos-2">
+          <img src="images/bougainvillea.png?t=1" alt="Plant" style="transform: scaleX(-1);" />
+        </div>
+        <div class="plant-image plant-pos-3">
+          <img src="images/marigold.png?t=1" alt="Plant" style="transform: scaleX(-1);" />
+        </div>
+        <div class="plant-image plant-pos-4">
+          <img src="images/Yellow%20hibiscus.png" alt="Plant" />
+        </div>
+      </div>
+
+    </div><!-- .showcase-track -->
+  </main>
+
+  <!-- ═══ CTA + FOOTER ═══ -->
+  <div class="showcase-footer-area">
+
+    <!-- CTA Banner -->
+    <section class="cta-v2">
+      <div class="cta-v2-inner">
+        <div class="cta-v2-watermark" aria-hidden="true">green bloom</div>
+        <div class="cta-v2-content">
+          <span class="section-label" style="color:rgba(255,255,255,0.6)">Start Your Journey</span>
+          <h2>Ready to bring<br/><em>nature home?</em></h2>
+          <p>Over 500 plant varieties, hand-picked from the finest nurseries in India.</p>
+          <div class="cta-v2-btns">
+            <a href="indoor-plants.html" class="btn-cta-solid" id="cta-indoor">Browse Indoor Plants</a>
+            <a href="outdoor-plants.html" class="btn-cta-ghost" id="cta-outdoor">Browse Outdoor Plants</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-v2">
+      <div class="footer-v2-watermark" aria-hidden="true">green bloom</div>
+      <div class="container-wide footer-v2-inner">
+        <div class="footer-v2-brand">
+          <div class="footer-v2-logo">🌿 Green Bloom</div>
+          <p>Bringing life and colour to urban spaces, one plant at a time.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram" class="social-btn">📸</a>
+            <a href="#" aria-label="Facebook" class="social-btn">👍</a>
+          </div>
+        </div>
+        <div class="footer-v2-cols">
+          <div class="footer-col">
+            <h5>Shop</h5>
+            <a href="indoor-plants.html">Indoor Plants</a>
+            <a href="outdoor-plants.html">Outdoor Plants</a>
+          </div>
+          <div class="footer-col">
+            <h5>About</h5>
+            <a href="about.html">Our Story</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="blog.html">Plant Care Blog</a>
+          </div>
+          <div class="footer-col">
+            <h5>Support</h5>
+            <a href="shipping.html">Shipping Policy</a>
+            <a href="faq.html">FAQ</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-v2-bottom">
+        <p>© 2025 Green Bloom. All Rights Reserved. Made with 💚</p>
+      </div>
+    </footer>
+
+  </div><!-- .showcase-footer-area -->
+
+  <script src="main.js?v=4"></script>
+  <script src="gooey-nav.js?v=4"></script>
+  <script src="click-spark.js?v=4"></script>
+  <script src="plant-showcase.js?v=4"></script>
+</body>
+</html>

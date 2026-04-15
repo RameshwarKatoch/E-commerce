@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Green Bloom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="home.css?v=4" />
+  <link rel="stylesheet" href="gooey-nav.css?v=4" />
+  <link rel="stylesheet" href="pages.css?v=4" />
+</head>
+<body>
+  <nav class="navbar-v2" id="navbar">
+    <a href="index.html" class="nav-v2-logo">
+      <span class="logo-mark">🌿</span>
+      Green Bloom
+    </a>
+
+    <div class="nav-v2-right">
+      <div class="gooey-nav-container">
+        <nav>
+          <ul class="nav-v2-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="indoor-plants.html">Indoor</a></li>
+            <li><a href="outdoor-plants.html">Outdoor</a></li>
+          </ul>
+        </nav>
+        <span class="effect filter"></span>
+        <span class="effect text"></span>
+      </div>
+      <a href="cart.html" class="nav-v2-shop" id="nav-shop-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+        </svg>
+        <span>Cart</span>
+        <span class="cart-badge">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero" style="background: linear-gradient(135deg, #2D5016, #3B6B20, #52B788);">
+    <span class="page-hero-tag">Get in Touch</span>
+    <h1>Contact <em>Us</em></h1>
+    <p>We'd love to hear from you. Reach out anytime.</p>
+  </section>
+
+  <div class="page-content-wide">
+    <div class="contact-grid">
+      <div>
+        <span class="page-section-label">Send a Message</span>
+        <h2 class="page-section-title">Let's <em>Talk Plants</em></h2>
+
+        <div id="contact-success" class="form-success">✅ Thank you for reaching out! We'll get back within 24 hours.</div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group"><label>Your Name *</label><input type="text" name="name" required /></div>
+            <div class="form-group"><label>Email *</label><input type="email" name="email" required /></div>
+          </div>
+          <div class="form-group"><label>Subject</label><input type="text" name="subject" placeholder="e.g. Plant care question" /></div>
+          <div class="form-group"><label>Message *</label><textarea name="message" placeholder="Tell us how we can help..." required></textarea></div>
+          <button type="submit" class="btn-submit" id="contact-submit">Send Message →</button>
+        </form>
+      </div>
+
+      <div>
+        <span class="page-section-label">Other Ways to Reach Us</span>
+        <h2 class="page-section-title" style="font-size:1.6rem;">We're Here <em>for You</em></h2>
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📧</div>
+            <div><h5>Email</h5><p>hello@greenbloom.in</p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📞</div>
+            <div><h5>Phone</h5><p>+91 98765 43210</p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div><h5>Address</h5><p>Green Bloom HQ<br/>Sector 15, Gurgaon<br/>Haryana 122001, India</p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">🕐</div>
+            <div><h5>Working Hours</h5><p>Mon – Sat: 9 AM – 7 PM<br/>Sunday: 10 AM – 4 PM</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-v2">
+    <div class="footer-v2-watermark" aria-hidden="true">green bloom</div>
+    <div class="container-wide footer-v2-inner">
+      <div class="footer-v2-brand"><div class="footer-v2-logo">🌿 Green Bloom</div><p>Bringing life and colour to urban spaces.</p></div>
+      <div class="footer-v2-cols">
+        <div class="footer-col"><h5>Shop</h5><a href="indoor-plants.html">Indoor Plants</a><a href="outdoor-plants.html">Outdoor Plants</a></div>
+        <div class="footer-col"><h5>About</h5><a href="about.html">Our Story</a><a href="contact.html">Contact Us</a><a href="blog.html">Blog</a></div>
+        <div class="footer-col"><h5>Support</h5><a href="shipping.html">Shipping</a><a href="faq.html">FAQ</a></div>
+      </div>
+    </div>
+    <div class="footer-v2-bottom"><p>© 2025 Green Bloom. Made with 💚</p></div>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('contact-submit');
+      btn.disabled = true; btn.textContent = 'Sending...';
+
+      const form = new FormData(e.target);
+      const body = Object.fromEntries(form.entries());
+
+      const res = await fetch('/api/contact', {
+        method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(body)
+      });
+
+      if (res.ok) {
+        document.getElementById('contact-success').classList.add('show');
+        e.target.reset();
+      }
+      btn.disabled = false; btn.textContent = 'Send Message →';
+    });
+  <script src="main.js?v=4"></script>
+  <script src="gooey-nav.js?v=4"></script>
+</body>
+</html>
